@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="style.css">
-    <!--ОПРЕДЕЛИТЬ КЛЮЧЕВЫЕ СЛОВА-->
+    
     <meta name="keywords"
           content="техника для стройки, строительные материалы, инструменты, инструменты дешево, 
           интернет-магазин, стройматериалы, Питер, Санкт-Петербург, дрель, перфоратор">
-    <!--СФОРМИРОВАТЬ КРАТКОЕ ОПИСАНИЕ-->
+   
     <meta name="description" 
           content="Техника для стройки, строительные материалы и инструменты. Лучшие цены в России, 
           доставка товара от &quot;до двери&quot; по Питеру до самых отдаленных точек страны. 
@@ -46,14 +46,16 @@
         <p>
           Интернет-магазин строительных материалов и инструментов для ремонта
         </p>
+
         <div>
-          <button type="button">+7 (812) 555-05-55</button>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 10/8</p>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 10/8</address>
         </div>
-        <div>
-          <button type="button">Войти</button>
-          <button type="button">Регистрация</button>
-        </div>
+        
+        <p>
+          <a href="login.html">Войти</a>
+          <a href="newlog.html">Регистрация</a>
+        </p>
       </div>      
       
     </header>
@@ -67,7 +69,7 @@
       <h2>Дополнительные услуги</h2>
 
       <section>
-        <h2>КОМПАНИЯ «Техномарт»</h2>
+        <h2>Компания «Техномарт»</h2>
         <p>
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
           строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
@@ -88,7 +90,7 @@
       </section> 
 
       <section>
-        <h2>КОНТАКТЫ</h2>
+        <h2>Контакты</h2>
       
         <p>
           Вы можете забрать товар сами,<br>
@@ -99,32 +101,33 @@
           <img src="#" alt="местоположение магазина на карте">
 
         <p>
-          <button type="button">Заблудились? Напишите нам!</button>
+          <a href="map.html">Заблудились? Напишите нам!</a>
         </p> 
         
       </section>
 
       <section>
-      <h3>Форма обратной связи</h3>
+        <h3>Форма обратной связи</h3>
+
         <form action="https://echo.htmlacademy.ru/courses" method="post">
           <p>
             <label>
               Ваше имя:<br>
-              <input type="text" name="name" value="Имя Фамилия"> 
+              <input type="text" name="name" placeholder="Имя Фамилия"> 
             </label>
           </p>
 
           <p>
             <label>
               Ваш e-mail:<br>
-              <input type="text" name="e-mail" value="email@example.com"> 
+              <input type="text" name="e-mail" placeholder="email@example.com"> 
             </label>
           </p>
 
           <p>
             <label>
               Текст письма:<br>
-              <textarea name="letter" rows="10" cols="30">В свободной форме</textarea>
+              <textarea name="letter" rows="10" cols="30" placeholder="В свободной форме"></textarea>
             </label>
           </p>      
           
@@ -135,47 +138,46 @@
       </section>   
     </main>
 
-  <footer> <!--class="page-footer"-->
-
-    <div>
-      <div>
-        <a>
-          <img src="#" alt="логотип техномарт">
-        </a> 
-        <p>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> 
-          +7 (812) 555-05-55
-        </p>
+    <footer> <!--class="page-footer"-->
+    
+      <div>   
+      
+        <div>
+          <a>
+            <img src="#" alt="логотип техномарт">
+          </a> 
+          
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address> 
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                 
+        </div>
+      
+        <div>
+          <ul>        
+            <li><a href="info.html">Компания</a></li>        
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="contacts.html">Контакты</a></li>                  
+          </ul>
+        
+          <ul>
+            <li><a href="materials.html">Материалы</a></li>
+            <li><a href="equipment.html">Техника</a></li>
+            <li><a href="tool.html">Инструмент</a></li>
+            <li><a href="specialoffers.html">Спецпредложения</a></li>            
+          </ul>  
+        </div> 
+      
       </div>
-  
-      <div>
-        <ul>        
-          <li><a href="info.html">Компания</a></li>        
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="contacts.html">Контакты</a></li>                  
-        </ul>
-  
-        <ul>
-          <li><a href="materials.html">Материалы</a></li>
-          <li><a href="equipment.html">Техника</a></li>
-          <li><a href="tool.html">Инструмент</a></li>
-          <li><a href="specialoffers.html">Спецпредложения</a></li>            
-        </ul>  
-      </div>
-    </div>
-
-    <div>
-
-    </div>
+    
       <section class="copyright">
         <h3>Копирайт</h3>
-        © 2010–2017 Компания «Техномарт»<br> 
+        &copy; 2010–2017 Компания «Техномарт»<br> 
         Все права защищены      
       </section>
-
-      <section class="socialcontacts">
+    
+      <section class="social-contacts">
         <h3>Социальные сети</h3>
         <ul>
           <li><a href="#">Вконтакте</a></li>
@@ -183,24 +185,20 @@
           <li><a href="#">Instagram</a></li>                     
         </ul>        
       </section>
-
-    <section class="developer">
-      <h3>Информация о разработчике</h3>
-
-      <p>
-        Обратная связь:<br>
-        <a href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a> 
-      </p>
-      <p>
-        Разработано —<br> 
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-      </p>    
-        
-    </section>    
-
-  </footer>    
-   
-   <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    
+      <section class="developer">
+        <h3>Информация о разработчике</h3>
+      
+        <p>
+          Обратная связь:<br>
+          <a href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a> 
+        </p>
+        <p>
+          Разработано —<br> 
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>            
+      </section>    
+    
+    </footer>    
   </body>
 </html>
