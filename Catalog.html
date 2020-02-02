@@ -70,39 +70,46 @@
       <h1>Перфораторы</h1>
 
       <aside>
-        <h2>Фильтр товаров</h2>
-        <!--здесь будет форма, возможно-->
+        <h2>Фильтр:</h2>        
+        <!--форма-->
         <form action="https://echo.htmlacademy.ru/courses" method="post">
+          
+          <div class="filter-price">
+            Цена:                  
+              <!--здесь будет работающий ползунок-->
+              <p><input type="range" min="0" max="300000"></p>
+              <input type="text" name="lowprice" placeholder="0"> - 
+              <input type="text" name="highprice" placeholder="300 000">                
+          </div>
 
-          <h3>Производители:</h3>
+          
           <fieldset class="brand">            
-            <!--<legend>Выбор производителя</legend>-->
+            <legend>Производители:</legend>
             
               <label>
-                <input type="checkbox" value="Bosch" checked>Bosch
+                <input type="checkbox" name="brand" value="Bosch" checked>Bosch
               </label>            
             
               <label>
-                <input type="checkbox" value="Интерскол">Интерскол
+                <input type="checkbox" name="brand" value="Интерскол">Интерскол
               </label>            
             
               <label>
-                <input type="checkbox" value="Makita" checked>Makita
+                <input type="checkbox" name="brand" value="Makita" checked>Makita
               </label>            
            
               <label>
-                <input type="checkbox" value="Dewalt">Dewalt
+                <input type="checkbox" name="brand" value="Dewalt">Dewalt
               </label>            
             
               <label>
-                <input type="checkbox" value="Hitachi">Hitachi
+                <input type="checkbox" name="brand" value="Hitachi">Hitachi
               </label>            
            
           </fieldset>
   
-          <h3>Питание:</h3>
           <fieldset class="type-charge">            
-            <!--<legend>Выбор типа питания</legend>-->
+            <legend>Питание:</legend>
 
               <label>
                 <input type="radio" name="charge" value="1" checked>Аккумуляторные
@@ -117,6 +124,20 @@
           <p><input type="submit" value="Показать"></p>
         </form>
       </aside>
+
+      <!--Сортировка--> 
+      <div>
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+        Сортировка:
+        <ul>
+          <li><input type="submit" name="sort" value="По цене"></li>
+          <li><input type="submit" name="sort" value="По типу"></li>
+          <li><input type="submit" name="sort" value="По функционалу"></li>
+        </ul>
+      </form>
+      <!--в конце строки указатели - сортировка по возрастанию/убыванию?-->
+      </div>
+      
 
       <section class="catalog">
         <h2>Список товаров</h2>
