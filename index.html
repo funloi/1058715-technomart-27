@@ -20,11 +20,12 @@
       <nav>
         <!-- class="main-nav" -->
         <a>
-          <img src="img/logo/logo-head.png" width="109" height="19" alt="Логотип гипермаркета &quot;техномарт&quot;">
+          <img src="img/logo/logo-head.png" width="109" height="19" 
+          alt="Логотип гипермаркета &quot;техномарт&quot;">
         </a>     
         
         <ul>
-          <li><input type="search" value="Поиск"></li>          
+          <li><input type="search" name="Поиск" value="Поиск"></li>          
           <li><a href="favorites.html">Закладки</a></li>
           <li><a href="shopbasket.html">Корзина</a></li>
           <li><a href="checkout.html">Оформить заказ</a></li>                          
@@ -56,14 +57,51 @@
           <a href="login.html">Войти</a>
           <a href="newlog.html">Регистрация</a>
         </p>
-      </div>      
+
+      </div>  
+      <!--Форма входа в личный кабинет-->   
+      <section>
+        <h3>Вход в личный кабинет</h3>
+
+        <button type="button">Закрыть</button>
+
+        <form action="https://echo.htmlacademy.ru/courses" method="post" >
+          <p>
+            <label>
+              Ваше имя:<br>
+              <input type="text" name="name" placeholder="Имя Фамилия"> 
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Ваш пароль:<br>
+              <input type="password" name="password" placeholder="678aSd4H"> 
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="checkbox" name="remember">Запомнить пароль
+            </label>      
+          </p>
+          
+          <a href="newpassword.html">Забыли пароль? Вам сюда!</a>
+          
+          <p>
+            <button type="submit">Войти</button>            
+          </p>               
+        </form>
+      </section>   
+      
+      <!--Форма регистрации???-->   
       
     </header>
     
     <main>
-      <h1>Магазин "Техномарт"</h1>
+      <h1 class="visually-hidden">Магазин "Техномарт"</h1>
 
-      <h2>Популярные разделы</h2>
+      <h2 class="visually-hidden">Популярные разделы</h2>
 
       <table> 
         <!--нужно кликать именно на надпись, чтобы перейти в соответствующий раздел-->
@@ -139,7 +177,9 @@
             </a>
 
             <p>
-              <img src="img/perforator/perforator_3.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 9000">
+              <img src="img/perforator/perforator_3.jpg" width="218" height="170" 
+              alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 9000. 
+              Профессиональный инструмент синего цвета с эргономичной рукояткой класса A">
             </p>
             
             <div class="change-price">
@@ -167,7 +207,9 @@
             </a>
 
             <p>
-              <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 3000">
+              <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+              alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 3000. 
+              Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
             </p>
             
             <div class="change-price">
@@ -176,6 +218,11 @@
                 15500 Р. 
               </p>
             </div> 
+
+            <div><!--later-->
+              <button type="button">Купить</button><br>
+              <button type="button">В закладки</button>
+            </div>
           </article>
         </li>
 
@@ -190,7 +237,9 @@
             </a>
 
             <p>
-              <img src="img/perforator/perforator_2.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 6000">
+              <img src="img/perforator/perforator_2.jpg" width="218" height="170" 
+              alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 6000. 
+              Профессиональный инструмент синего цвета с эргономичной рукояткой класса B">
             </p>
             
             <div class="change-price">
@@ -198,7 +247,12 @@
               <p class="good-price">
                 25500 Р. 
               </p>
-            </div> 
+            </div>
+            
+            <div><!--later-->
+              <button type="button">Купить</button><br>
+              <button type="button">В закладки</button>
+            </div>
           </article>
         </li>
 
@@ -214,12 +268,19 @@
             </a>
 
             <p>
-              <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 2000">
+              <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+              alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 2000. 
+              Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
             </p>
             
             <p class="good-price">
               12500 Р. 
             </p>  
+
+            <div><!--later-->
+              <button type="button">Купить</button><br>
+              <button type="button">В закладки</button>
+            </div>
           </article>
         </li>
 
@@ -231,40 +292,67 @@
       <ul class="popular-brands-block"> 
         <!--Должны ли логотипы производителей быть ссылкой 
           на страницу с информацией о данном производителе
-           или это просто картинки?-->
+           или это просто картинки?
+          Мое решение: в любом случае. это будет ссылка, 
+          либо на страницу производителя, либо на отсортированные по бренду товары, 
+          что будет лучше, т.к. страница каталога имеет блок как раз для информации 
+          о производителе в данном случае, а не о конкретных инструментах -->
         <li>
-          Bosch
-          <img src="img/logo-brands/bosch.jpg" width="126" height="37" alt="Логотип производителя инструментов и техники Bosch">
+          <a href="#">            
+            <img src="img/logo-brands/bosch.jpg" width="126" height="37" 
+            alt="Логотип производителя инструментов и техники Bosch">
+          </a>
         </li>
+
         <li>
-          Makita
-          <img src="img/logo-brands/makita.jpg" width="123" height="40" alt="Логотип производителя инструментов и техники Makita">
+          <a href="#">            
+            <img src="img/logo-brands/makita.jpg" width="123" height="40" 
+            alt="Логотип производителя инструментов и техники Makita">
+          </a>
         </li>
+
         <li>
-          Dewalt
-          <img src="img/logo-brands/de-walt.png" width="146" height="44" alt="Логотип производителя инструментов и техники Dewalt">
+          <a href="#">            
+            <img src="img/logo-brands/de-walt.png" width="146" height="44" 
+            alt="Логотип производителя инструментов и техники Dewalt">       
+          </a>          
         </li>
+
         <li>
-          Интерскол
-          <img src="img/logo-brands/invalid-name.jpg" width="200" height="88" alt="Логотип производителя инструментов и техники Интерскол">
+          <a href="#">            
+            <img src="img/logo-brands/invalid-name.jpg" width="200" height="88" 
+            alt="Логотип производителя инструментов и техники Интерскол">
+          </a>          
         </li>
-        <li>
-          Hitachi
-          <img src="img/logo-brands/hitachi.png" width="169" height="31" alt="Логотип производителя инструментов и техники Hitachi">
+
+        <li>          
+          <a href="#">
+            <img src="img/logo-brands/hitachi.png" width="169" height="31" 
+            alt="Логотип производителя инструментов и техники Hitachi">
+          </a>          
         </li>
-        <li>
-          LG
-          <img src="img/logo-brands/lg.jpg" width="121" height="73" alt="Логотип производителя инструментов и техники LG">
+
+        <li>          
+          <a href="#">
+            <img src="img/logo-brands/lg.jpg" width="121" height="73" 
+            alt="Логотип производителя инструментов и техники LG">
+          </a>          
         </li>
-        <li>
-          AEG power solutions
-          <img src="img/logo-brands/aeg.jpg" width="151" height="96" alt="Логотип производителя инструментов и техники AEG power solutions">
+
+        <li>          
+          <a href="#">
+            <img src="img/logo-brands/aeg.jpg" width="151" height="96" 
+            alt="Логотип производителя инструментов и техники AEG power solutions">
+          </a>          
         </li>
-        <li>
-          Metabo<br>
-          Work. Don't play.
-          <img src="img/logo-brands/metabo.jpg" width="204" height="69" alt="Логотип производителя инструментов и техники Metabo. Work. Don't play.">
-        </li>        
+
+        <li>          
+          <a href="#">
+            <img src="img/logo-brands/metabo.jpg" width="204" height="69" 
+            alt="Логотип производителя инструментов и техники Metabo. Work. Don't play.">
+          </a>          
+        </li> 
+
       </ul>
         
       <section>
@@ -312,7 +400,6 @@
           <!--Думаю здесь должна быть форма для обратной связи 
             либо новая (ФИО,телефон), но пока оставлю просто ссылку-->
           <a href="#">Заявка на кредит</a>
-
         </section>
 
       </section>
@@ -349,8 +436,8 @@
         <!--место для интерактивной карты-->     
         <a href="map.html">
           <img src="img/map/map1.jpg" width="300" height="158" 
-            alt="Местоположение магазина на карте по адресу: 
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          alt="Местоположение магазина на карте по адресу: 
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </a>  
         <p>
           <a href="#">Заблудились? Напишите нам!</a>
@@ -359,7 +446,9 @@
       </section>
 
       <section>
-        <h3>Форма обратной связи</h3>
+        <h3 class="visually-hidden">Форма обратной связи</h3>
+
+        <button type="button">Закрыть</button>
 
         <form action="https://echo.htmlacademy.ru/courses" method="post">
           <p>
@@ -384,7 +473,7 @@
           </p>      
           
           <p>
-            <input type="submit" value="Отправить">
+            <button type="submit">Отправить</button>
           </p>               
         </form>
       </section>   
@@ -396,7 +485,8 @@
       
         <div>
           <a>
-            <img src="img/logo/logo-foot.png" width="138" height="23" alt="Логотип гипермаркета &quot;техномарт&quot;">
+            <img src="img/logo/logo-foot.png" width="138" height="23" 
+            alt="Логотип гипермаркета &quot;техномарт&quot;">
           </a> 
           
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address> 
@@ -424,14 +514,16 @@
       </div>
     
       <section class="copyright">
-        <h3>Копирайт</h3>
+        <h3 class="visually-hidden">Копирайт</h3>
         &copy; 2010–2017 Компания «Техномарт»<br> 
         Все права защищены      
       </section>
     
       <section class="social-contacts">
-        <h3>Социальные сети</h3>
+        <h3 class="visually-hidden">Социальные сети</h3>
         <ul>
+          <!--после подключения декоративных элементов в CSS
+          спрятать подпись, используя атрибут aria-label-->
           <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Instagram</a></li>                     
@@ -439,7 +531,7 @@
       </section>
     
       <section class="developer">
-        <h3>Информация о разработчике</h3>
+        <h3 class="visually-hidden">Информация о разработчике</h3>
       
         <p>
           Обратная связь:<br>

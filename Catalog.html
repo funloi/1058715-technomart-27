@@ -44,11 +44,13 @@
         </div>
 
         <div>
-          <a href="lk.html">Имя Фамилия</a><button type="button">Выйти</button>
+          <a href="lk.html">Имя Фамилия</a>
+          <button type="button">Выйти</button>
+
           <ul>
             <li><a href="myordered.html">Мои заказы</a></li>
             <li><a href="lk.html">Личный кабинет</a></li>                    
-          </ul>
+          </ul>          
         </div>
       </div>      
       
@@ -59,7 +61,7 @@
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">
-            <img src="#" alt="Иконка главной страницы">
+            <span class="visually-hidden">Главная<!--Иконка главной страницы--></span>
           </a> 
         </li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -72,7 +74,7 @@
       <aside>
         <h2>Фильтр:</h2>        
         <!--форма-->
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
           
           <fieldset class="price">
             <legend>Цена:</legend>                             
@@ -84,63 +86,83 @@
 
           
           <fieldset class="brand">            
-            <legend>Производители:</legend>
-            
-              <label>
-                <input type="checkbox" name="brand" value="Bosch" checked>Bosch
-              </label>            
-            
-              <label>
-                <input type="checkbox" name="brand" value="Интерскол">Интерскол
-              </label>            
-            
-              <label>
-                <input type="checkbox" name="brand" value="Makita" checked>Makita
-              </label>            
-           
-              <label>
-                <input type="checkbox" name="brand" value="Dewalt">Dewalt
-              </label>            
-            
-              <label>
-                <input type="checkbox" name="brand" value="Hitachi">Hitachi
-              </label>            
-           
+            <legend>Производители:</legend>            
+              <ul>
+                
+                <li>
+                  <label>
+                    <input type="checkbox" name="brand" value="Bosch" checked>Bosch
+                  </label>  
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" name="brand" value="Интерскол">Интерскол
+                  </label>
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" name="brand" value="Makita" checked>Makita
+                  </label>  
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" name="brand" value="Dewalt">Dewalt
+                  </label>     
+                </li>
+
+                <li>
+                  <label>
+                    <input type="checkbox" name="brand" value="Hitachi">Hitachi
+                  </label>   
+                </li>
+                                
+              </ul>   
           </fieldset>
   
           <fieldset class="type-charge">            
             <legend>Питание:</legend>
+              <ul>
 
-              <label>
-                <input type="radio" name="charge" value="1" checked>Аккумуляторные
-              </label>            
-            
-              <label>
-                <input type="radio" name="charge" value="2">Сетевые
-              </label>            
-            
+                <li>
+                  <label>
+                    <input type="radio" name="charge" value="1" checked>Аккумуляторные
+                  </label> 
+                </li>
+
+                <li>
+                  <label>
+                    <input type="radio" name="charge" value="2">Сетевые
+                  </label>
+                </li>
+
+              </ul>
           </fieldset>
   
-          <p><input type="submit" value="Показать"></p>
+          <button type="submit">Показать</button>
+
         </form>
       </aside>
 
       <!--Сортировка--> 
       <div>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
         Сортировка:
-        <ul>
-          <li><input type="submit" name="sort" value="По цене"></li>
-          <li><input type="submit" name="sort" value="По типу"></li>
-          <li><input type="submit" name="sort" value="По функционалу"></li>
-        </ul>
-      </form>
-      <!--в конце строки указатели - сортировка по возрастанию/убыванию?-->
+          <ul>
+            <li><button type="submit" name="sort" value="1">По цене</button></li>
+            <li><button type="submit" name="sort" value="2">По типу</button></li>
+            <li><button type="submit" name="sort" value="3">По функционалу</button></li>
+            <li><button type="submit" name="sort" value="4">По возрастанию</button></li>
+            <li><button type="submit" name="sort" value="5">По убыванию</button></li>
+          </ul>
+        </form>      
       </div>
       
 
       <section class="catalog">
-        <h2>Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
 
         <ul class="catalog-list">
 
@@ -155,7 +177,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 3000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 3000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <div class="change-price">
@@ -183,7 +207,9 @@
               </a>
               
               <p>
-                <img src="img/perforator/perforator_2.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 6000">
+                <img src="img/perforator/perforator_2.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 6000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса B">
               </p>
               
               <div class="change-price">
@@ -212,7 +238,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 2000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 2000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <p class="good-price">
@@ -237,7 +265,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 3000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 3000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <div class="change-price">
@@ -266,7 +296,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_2.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 6000">
+                <img src="img/perforator/perforator_2.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 6000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса B">
               </p>
               
               <div class="change-price">
@@ -294,7 +326,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 2000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 2000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <p class="good-price">
@@ -320,7 +354,9 @@
               </a> 
 
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 3000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 3000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <div class="change-price">
@@ -348,7 +384,9 @@
               </a>
 
               <p>
-                <img src="img/perforator/perforator_2.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 6000">
+                <img src="img/perforator/perforator_2.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 6000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса B">
               </p>
               
               <div class="change-price">
@@ -376,7 +414,9 @@
               </a>
               
               <p>
-                <img src="img/perforator/perforator_1.jpg" width="218" height="170" alt="Фотография сбоку перфоратора Bosch BFG 2000">
+                <img src="img/perforator/perforator_1.jpg" width="218" height="170" 
+                alt="Фотография (вид сбоку) сетевого перфоратора Bosch BFG 2000. 
+                Профессиональный инструмент синего цвета с эргономичной рукояткой класса C">
               </p>
               
               <p class="good-price">
@@ -419,7 +459,8 @@
       <div>
         <div>
           <a href="index.html">
-            <img src="img/logo/logo-foot.png" width="138" height="23" alt="Логотип гипермаркета &quot;техномарт&quot;">
+            <img src="img/logo/logo-foot.png" width="138" height="23" 
+            alt="Логотип гипермаркета &quot;техномарт&quot;">
           </a> 
 
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address> 
@@ -447,13 +488,13 @@
       </div>
 
       <section class="copyright">
-        <h3>Копирайт</h3>
+        <h3 class="visually-hidden">Копирайт</h3>
         &copy; 2010–2017 Компания «Техномарт»<br> 
         Все права защищены      
       </section>
     
-      <section class="social-contacts">
-        <h3>Социальные сети</h3>
+      <section class="social-contacts">        
+        <h3 class="visually-hidden">Социальные сети</h3>
         <ul>
           <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Facebook</a></li>
@@ -462,7 +503,7 @@
       </section>
 
       <section class="developer">
-        <h3>Информация о разработчике</h3>
+        <h3 class="visually-hidden">Информация о разработчике</h3>
 
         <p>
           Обратная связь:<br>
