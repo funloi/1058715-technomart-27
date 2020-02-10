@@ -11,11 +11,19 @@
       <nav>
                
         <a href="index.html">
-          <img src="img/logo/logo-head.png" width="109" height="19" alt="Логотип гипермаркета &quot;техномарт&quot;">
+          <img src="img/logo/logo-head.png" width="109" height="19" 
+          alt="Логотип гипермаркета &quot;техномарт&quot;">
         </a>     
         
         <ul>
-          <li><input type="search" value="Поиск"></li>          
+          <li>
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              <input type="search" name="Поиск" placeholder="Поиск" autofocus>
+              <button type="submit">
+                <span class="visually-hidden">Найти</span>
+              </button>
+            </form>
+          </li>          
           <li><a href="favorites.html">Закладки</a></li>
           <li><a href="shopbasket.html">Корзина</a></li>
           <li><a href="checkout.html">Оформить заказ</a></li>                          
@@ -45,7 +53,9 @@
 
         <div>
           <a href="lk.html">Имя Фамилия</a>
-          <button type="button">Выйти</button>
+          <button type="button">
+            <span class="visually-hidden">Выйти<!--Иконка--></span>
+          </button>
 
           <ul>
             <li><a href="myordered.html">Мои заказы</a></li>
@@ -61,7 +71,7 @@
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">
-            <span class="visually-hidden">Главная<!--Иконка главной страницы--></span>
+            <span class="visually-hidden">Главная<!--Иконка--></span>
           </a> 
         </li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -74,14 +84,20 @@
       <aside>
         <h2>Фильтр:</h2>        
         <!--форма-->
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
+        <form action="https://echo.htmlacademy.ru/courses" method="get" 
+              oninput="outprice.value=rangeprice.value">
           
           <fieldset class="price">
             <legend>Цена:</legend>                             
-              <!--здесь будет работающий ползунок-->
-              <p>0<input type="range" min="0" max="300000">300 000</p>
-              <input type="text" name="lowprice" placeholder="0"> - 
-              <input type="text" name="highprice" placeholder="300 000">                
+              
+              <output name="outprice"></output>
+
+              <p>0<input type="range" name="rangeprice" min="0" max="300000" step="100">300 000</p>      
+
+              <input type="text" name="lowprice" placeholder="0" 
+                     pattern="[0-9\s]{0,7}" title="Введите минимальную стоимость"> - 
+              <input type="text" name="highprice" placeholder="300 000" 
+                     pattern="[0-9\s]{0,7}"  title="Введите максимальную стоимость">                
           </fieldset>
 
           
@@ -147,9 +163,10 @@
       </aside>
 
       <!--Сортировка--> 
-      <div>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-        Сортировка:
+      <form action="https://echo.htmlacademy.ru/courses" method="get">
+        <fieldset>
+          <legend>Сортировка:</legend>
+
           <ul>
             <li><button type="submit" name="sort" value="1">По цене</button></li>
             <li><button type="submit" name="sort" value="2">По типу</button></li>
@@ -157,9 +174,9 @@
             <li><button type="submit" name="sort" value="4">По возрастанию</button></li>
             <li><button type="submit" name="sort" value="5">По убыванию</button></li>
           </ul>
-        </form>      
-      </div>
-      
+          
+        </fieldset> 
+      </form>  
 
       <section class="catalog">
         <h2 class="visually-hidden">Список товаров</h2>
@@ -189,10 +206,10 @@
                 </p>
               </div>   
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -219,10 +236,10 @@
                 </p>
               </div>  
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -247,10 +264,10 @@
                 12500 Р. 
               </p>  
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -277,10 +294,10 @@
                 </p>
               </div>      
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -308,10 +325,10 @@
                 </p>
               </div>    
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -335,10 +352,10 @@
                 12500 Р. 
               </p>    
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -366,10 +383,10 @@
                 </p>
               </div>      
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
           </article>
           </li>
 
@@ -396,10 +413,10 @@
                 </p>
               </div>       
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
           </li>
 
@@ -423,14 +440,29 @@
                 12500 Р. 
               </p>     
 
-              <div><!--later-->
+              <fieldset><!--later-->
                 <button type="button">Купить</button><br>
                 <button type="button">В закладки</button>
-              </div>
+              </fieldset>
             </article>
-          </li>          
-
+          </li>   
         </ul>
+
+        <!--Pop-up -->   
+        <div class="pop-up">
+          
+          <p>Товар добавлен в корзину!</p>
+
+          <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+
+          <ul>
+            <li><a href="shopbasket.html">Оформить заказ</a></li>
+            <li><a href="catalog.html">Продолжить покупки</a></li>                    
+          </ul>   
+        </div>   
+        
 
         <ul class="pagination-list">
           <li class="pagination-item"><a>1</a></li>
@@ -450,8 +482,7 @@
           В ассортиментном ряду есть выбор «трехрежимников»: 
           в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
-      </section>
-      
+      </section>      
     </main>
 
     <footer> <!--class="page-footer"-->
@@ -465,7 +496,6 @@
 
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address> 
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-
         </div>
       
         <div>
@@ -484,7 +514,6 @@
             <li><a href="specialoffers.html">Спецпредложения</a></li>            
           </ul>  
         </div>
-
       </div>
 
       <section class="copyright">
@@ -514,9 +543,7 @@
           Разработано —<br> 
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>  
-
-      </section>    
-
+      </section>  
     </footer>    
   </body>
 </html>

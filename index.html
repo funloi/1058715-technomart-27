@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -25,7 +25,14 @@
         </a>     
         
         <ul>
-          <li><input type="search" name="Поиск" value="Поиск"></li>          
+          <li>
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              <input type="search" name="Поиск" placeholder="Поиск" autofocus>
+              <button type="submit">
+                <span class="visually-hidden">Найти</span>
+              </button>
+            </form>
+          </li>          
           <li><a href="favorites.html">Закладки</a></li>
           <li><a href="shopbasket.html">Корзина</a></li>
           <li><a href="checkout.html">Оформить заказ</a></li>                          
@@ -60,23 +67,27 @@
 
       </div>  
       <!--Форма входа в личный кабинет-->   
-      <section>
-        <h3>Вход в личный кабинет</h3>
+      <form action="https://echo.htmlacademy.ru/courses" method="post" >
+        <fieldset>
+          <legend>Вход в личный кабинет</legend>        
 
-        <button type="button">Закрыть</button>
-
-        <form action="https://echo.htmlacademy.ru/courses" method="post" >
+          <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        
           <p>
             <label>
               Ваше имя:<br>
-              <input type="text" name="name" placeholder="Имя Фамилия"> 
+              <input type="text" name="name" placeholder="Имя Фамилия" required 
+              pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"> 
             </label>
           </p>
 
           <p>
             <label>
               Ваш пароль:<br>
-              <input type="password" name="password" placeholder="678aSd4H"> 
+              <input type="password" name="password" placeholder="678aSd4H" required 
+              pattern="[A-Za-z0-9]{8,}" title="Пароль должен содержать любые латинские символы aA-zZ и цифры от 0 до 9"> 
             </label>
           </p>
 
@@ -90,9 +101,9 @@
           
           <p>
             <button type="submit">Войти</button>            
-          </p>               
-        </form>
-      </section>   
+          </p>              
+        </fieldset>   
+      </form>
       
       <!--Форма регистрации???-->   
       
@@ -126,11 +137,8 @@
 
         <tr>
           <td colspan="2" rowspan="2">
-            <!--Вот здесь не совсем понятна роль изображений. 
-            Они все декоративные и ведут на страницу catalog.html 
-            либо каждая из картинок со своей подписью ведет на конкретную страницу, 
-            соответствующую заголовку, где только дрели, только перфораторы и т.п.-->
-            <!--Посколько на кнопке написано "Открыть каталог", пока будет просто ссылка на каталог-->
+            
+            <!--ссылка на каталог-->
             
             <div>
               Дрели<br>
@@ -189,10 +197,10 @@
               </p>
             </div> 
             
-            <div><!--later-->
+            <fieldset><!--later-->
               <button type="button">Купить</button><br>
               <button type="button">В закладки</button>
-            </div>
+            </fieldset>
           </article>
         </li>
         
@@ -219,10 +227,10 @@
               </p>
             </div> 
 
-            <div><!--later-->
+            <fieldset><!--later-->
               <button type="button">Купить</button><br>
               <button type="button">В закладки</button>
-            </div>
+            </fieldset>
           </article>
         </li>
 
@@ -249,10 +257,10 @@
               </p>
             </div>
             
-            <div><!--later-->
+            <fieldset><!--later-->
               <button type="button">Купить</button><br>
               <button type="button">В закладки</button>
-            </div>
+            </fieldset>
           </article>
         </li>
 
@@ -277,10 +285,10 @@
               12500 Р. 
             </p>  
 
-            <div><!--later-->
+            <fieldset><!--later-->
               <button type="button">Купить</button><br>
               <button type="button">В закладки</button>
-            </div>
+            </fieldset>
           </article>
         </li>
 
@@ -443,25 +451,36 @@
           <a href="#">Заблудились? Напишите нам!</a>
         </p> 
         
+        <div>
+          <img src="img/map/map2.jpg" width="940" height="446" 
+          alt="Местоположение магазина на большой карте по адресу: 
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
       </section>
+      
+      <form action="https://echo.htmlacademy.ru/courses" method="post" >
+        <fieldset>
+          <legend class="visually-hidden">Форма обратной связи</legend>
 
-      <section>
-        <h3 class="visually-hidden">Форма обратной связи</h3>
-
-        <button type="button">Закрыть</button>
-
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <button type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        
           <p>
             <label>
               Ваше имя:<br>
-              <input type="text" name="name" placeholder="Имя Фамилия"> 
+              <input type="text" name="name" placeholder="Имя Фамилия" required 
+              pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"> 
             </label>
           </p>
 
           <p>
             <label>
               Ваш e-mail:<br>
-              <input type="text" name="e-mail" placeholder="email@example.com"> 
+              <input type="email" name="e-mail" placeholder="email@example.com" required> 
             </label>
           </p>
 
@@ -474,9 +493,9 @@
           
           <p>
             <button type="submit">Отправить</button>
-          </p>               
-        </form>
-      </section>   
+          </p> 
+        </fieldset>
+      </form>   
     </main>
 
     <footer> <!--class="page-footer"-->
